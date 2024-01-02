@@ -1,0 +1,65 @@
+/* Estilizando o botão com a classe btnsearch */
+.btnsearch {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remover a borda do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Mudar o cursor ao passar por cima do botão */
+    border-radius: 5px; /* Adicionar cantos arredondados */
+  }
+  
+  /* Mudar a cor do botão quando o mouse estiver sobre ele */
+  .btnsearch:hover {
+    background-color: #0056b4; /* Nova cor de fundo ao passar o mouse */
+  }
+  h1 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+    font-size: 40px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-align: center; /* Alinhamento do texto */
+  }
+  h2 {
+    color: #333; /* Cor do texto */
+    font-size: 25px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    text-align: left; /* Alinhamento do texto */
+  }
+
+    
+  p {
+    color: #333; /* Cor do texto */
+    font-size: 20px; /* Tamanho da fonte */
+    line-height: 1.5; /* Altura da linha */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    text-align: center;
+    
+  }
+  a {
+    width: 50px;
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border-radius: 1px;
+    font-size: 16px;
+    margin: left 10em;;
+  }
+
+  /* Estilizando a barra de busca */
+input[type="text"] {
+    width: 170px; 
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 10px; 
+    font-size: 16px; 
+    
+  }
+  body {
+    background-color: #f0f0f0; /* Cor de fundo desejada */
+    /* Outras propriedades de estilo que você desejar adicionar ao corpo da página */
+  }
+  
+ 
+  
+  

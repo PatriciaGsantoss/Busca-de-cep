@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina de Pesquisa</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <h2>Consulta de CEP</h2>
+    <h4>Insira um CEP para buscar informações:</h4>
+    
+    <form id="cepForm">
+        <label for="cepInput">CEP:</label>
+        <input type="text" id="cepInput" placeholder="Digite o CEP">
+        <button type="submit" class="btnsearch">Buscar</button>
+
+    <!-- </form>
+    <div id="result"></div> -->
+
+    <script>
+        $(document).ready(function() {
+            $('#cepForm').submit(function(e) {
+                e.preventDefault();
+                const cep = $('#cepInput').val();
+
+                $.ajax({
+                    url: 'sua_api.php?cep=' + cep,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(response) {
+                        // Exibir os dados recebidos do backend
+                        if (response.error) {
+                            $('#result').html('<p>' + response.error + '</p>');
+                        } else {
+                            const address = `
+                                <p>CEP: ${response.cep}</p>
+                                <p>Logradouro: ${response.logradouro}</p>
+                                <p>Bairro: ${response.bairro}</p>
+                                <p>Cidade: ${response.localidade}</p>
+                                <p>Estado: ${response.uf}</p>
+                            `;
+                            $('#result').html(address);
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Erro ao buscar dados do CEP', error);
+                        $('#result').html('<p>Erro ao buscar dados do CEP</p>');
+                    }
+                });
+
+                // Limpar o campo após a submissão
+                $('#cepInput').val('');
+            });
+        });
+    </script>
+</head>
+
+</form>
+<div id="result"></div>
+<br>
+
+<a href="home.html"><button>Voltar</button></a>
+</head>
+</html>
