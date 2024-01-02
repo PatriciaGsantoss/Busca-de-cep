@@ -23,7 +23,7 @@
                 const cep = $('#cepInput').val();
 
                 $.ajax({
-                    url: 'sua_api.php?cep=' + cep,
+                    url: 'lercep.php?cep=' + cep,
                     type: 'GET',
                     dataType: 'json',
                     success: function(response) {
